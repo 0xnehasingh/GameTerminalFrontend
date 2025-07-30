@@ -1,0 +1,105 @@
+import React from 'react'
+
+const FeaturedGames: React.FC = () => {
+  const games = [
+    {
+      title: 'Neon Blasters',
+      description: 'Fast-paced space shooter with stunning visuals',
+      developer: '@spacegamer',
+      image: 'space-shooter'
+    },
+    {
+      title: 'Cyber Runner',
+      description: 'Navigate through a cyberpunk cityscape',
+      developer: '@neondev',
+      image: 'cyberpunk'
+    },
+    {
+      title: 'Quantum Puzzle',
+      description: 'Mind-bending puzzles in quantum realm',
+      developer: '@puzzlemaster',
+      image: 'quantum'
+    },
+    {
+      title: 'Neon Racers',
+      description: 'High-speed racing on neon highways',
+      developer: '@speedfreak',
+      image: 'racing'
+    }
+  ]
+
+  const getGameImage = (imageType: string) => {
+    const images = {
+      'space-shooter': (
+        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+          <img 
+            src="/img1.png" 
+            alt="Neon Blasters - Space Shooter" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+      ),
+      'cyberpunk': (
+        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+          <img 
+            src="/img2.png" 
+            alt="Cyber Runner - Cyberpunk Cityscape" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+      ),
+      'quantum': (
+        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+          <img 
+            src="/img3.png" 
+            alt="Quantum Puzzle - Abstract Geometric Shapes" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+      ),
+      'racing': (
+        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+          <img 
+            src="/img4.png" 
+            alt="Neon Racers - Futuristic Racing Cars" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        </div>
+      )
+    }
+    return images[imageType as keyof typeof images] || images['space-shooter']
+  }
+
+  return (
+    <section className="py-20 bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+          Featured Games
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {games.map((game, index) => (
+            <div key={index} className="bg-dark-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+              {getGameImage(game.image)}
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2">{game.title}</h3>
+                <p className="text-gray-300 text-sm mb-3">{game.description}</p>
+                <p className="text-neon-cyan text-xs mb-4">By {game.developer}</p>
+                <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg font-medium hover:bg-green-400 transition-colors">
+                  Play Now
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default FeaturedGames 
