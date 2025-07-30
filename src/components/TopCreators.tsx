@@ -38,7 +38,7 @@ const TopCreators: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {creators.map((creator, index) => (
-            <div key={index} className="bg-dark-gray rounded-lg p-6 text-center hover:transform hover:scale-105 transition-all duration-300">
+            <div key={index} className="bg-dark-gray p-6 text-center hover:transform hover:scale-105 transition-all duration-300" style={{ borderRadius: '20px' }}>
               {/* Avatar */}
               <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
                 <img 
