@@ -25,7 +25,15 @@ const Footer: React.FC = () => {
         </div>
         
         {/* Tagline */}
-        <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
+        <p className="text-white mb-8 max-w-2xl mx-auto" style={{
+          fontFamily: 'ClashDisplay-Light',
+          fontWeight: 300,
+          fontStyle: 'Light',
+          fontSize: '20px',
+          lineHeight: '100%',
+          letterSpacing: '0%',
+          textAlign: 'center'
+        }}>
           No Code, No Wait, From AI-Powered Creation To Telegram-Ready Playability...
         </p>
         
