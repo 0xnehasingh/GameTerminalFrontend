@@ -6,26 +6,26 @@ const TopCreators: React.FC = () => {
       username: '@spacegamer',
       gamesCreated: '47 Games Created',
       avatar: '/avatar1.png',
-      buttonColor: 'bg-teal-500',
+      buttonColor: '#06B6D4',
       url: 'https://www.google.com'
     },
     {
       username: '@alexdev',
       gamesCreated: '32 Games Created',
       avatar: '/avatar2.png',
-      buttonColor: 'bg-blue-500'
+      buttonColor: '#3B82F6'
     },
     {
       username: '@sarah_g',
       gamesCreated: '47 Games Created',
       avatar: '/avatar3.png',
-      buttonColor: 'bg-neon-green'
+      buttonColor: '#8CF449'
     },
     {
       username: '@puzzler',
       gamesCreated: '47 Games Created',
       avatar: '/avatar4.png',
-      buttonColor: 'bg-cyan-500'
+      buttonColor: '#08EFBB'
     }
   ]
 
@@ -52,12 +52,15 @@ const TopCreators: React.FC = () => {
               <h3 className="text-lg font-bold text-white mb-2">{creator.username}</h3>
               
               {/* Games Created */}
-              <p className="text-gray-300 text-sm mb-4">{creator.gamesCreated}</p>
+              <p className="text-sm mb-4" style={{ color: creator.buttonColor }}>{creator.gamesCreated}</p>
               
               {/* View Games Button */}
-                             <button onClick={() => window.open(creator.url, '_blank')}  className={`w-full ${creator.buttonColor} text-black py-2 px-4 rounded-lg font-medium hover:opacity-80 transition-opacity`}>
+              <button 
+                onClick={() => window.open(creator.url, '_blank')}  
+                className="w-full text-black py-2 px-4 rounded-lg font-medium hover:opacity-80 transition-opacity"
+                style={{ backgroundColor: creator.buttonColor }}
+              >
                 View Games
-                
               </button>
             </div>
           ))}
