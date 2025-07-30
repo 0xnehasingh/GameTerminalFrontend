@@ -3,7 +3,7 @@ import { Linkedin, Twitter, Send } from 'lucide-react'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-16 bg-black">
+    <footer className="py-16 bg-black" style={{borderTop: '0.1px solid transparent', borderImage: 'linear-gradient(to right, transparent, #8CF449, transparent) 1'}}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Logo */}
         <div className="mb-8">

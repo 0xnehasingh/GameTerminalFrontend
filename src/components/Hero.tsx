@@ -22,7 +22,16 @@ const Hero: React.FC = () => {
             Build Worlds, Skip the{' '}
             <span className="text-neon-green">&lt;code&gt;</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300">
+          <p className="text-gray-300" style={{
+            fontFamily: 'Poppins',
+            fontWeight: 300,
+            fontStyle: 'normal',
+            fontSize: '18px',
+            lineHeight: '100%',
+            letterSpacing: '0%',
+            textAlign: 'center',
+            opacity: 0.5
+          }}>
             Create amazing games with AI assistance – no programming required.
           </p>
         </div>
