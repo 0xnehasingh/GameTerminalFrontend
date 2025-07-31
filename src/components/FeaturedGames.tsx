@@ -6,24 +6,28 @@ const FeaturedGames: React.FC = () => {
       title: 'Neon Blasters',
       description: 'Fast-paced space shooter with stunning visuals',
       developer: '@spacegamer',
+      textColor: 'text-teal-500',
       image: 'space-shooter'
     },
     {
       title: 'Cyber Runner',
       description: 'Navigate through a cyberpunk cityscape',
       developer: '@neondev',
+      textColor: 'text-blue-600',
       image: 'cyberpunk'
     },
     {
       title: 'Quantum Puzzle',
       description: 'Mind-bending puzzles in quantum realm',
       developer: '@puzzlemaster',
+      textColor: 'text-orange-500',
       image: 'quantum'
     },
     {
       title: 'Neon Racers',
       description: 'High-speed racing on neon highways',
       developer: '@speedfreak',
+      textColor: 'text-green-500',
       image: 'racing'
     }
   ]
@@ -75,9 +79,9 @@ const FeaturedGames: React.FC = () => {
   }
 
   return (
-    <section className="py-20 bg-black">
+    <section id="features" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-clash-medium text-white text-center mb-16">
           Featured Games
         </h2>
         
@@ -87,10 +91,10 @@ const FeaturedGames: React.FC = () => {
               {getGameImage(game.image)}
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">{game.title}</h3>
-                <p className="text-gray-300 text-sm mb-3">{game.description}</p>
-                <p className="text-neon-cyan text-xs mb-4">By {game.developer}</p>
-                <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg font-medium hover:bg-green-400 transition-colors">
+                <h3 className="text-xl font-poppins font-semibold text-white mb-2">{game.title}</h3>
+                <p className="text-gray-300 text-sm mb-3 font-poppins font-regular">{game.description}</p>
+                <p className={`text-neon-cyan text-xs mb-4 font-poppins font-semibold ${game.textColor}`}>By {game.developer}</p>
+                <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg hover:bg-green-400 font-poppins font-semibold transition-colors">
                   Play Now
                 </button>
               </div>

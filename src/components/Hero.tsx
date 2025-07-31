@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+    <section id="game" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       {/* Left Background */}
       <img
         src="/leftbg.svg"
@@ -31,23 +31,15 @@ const Hero: React.FC = () => {
         style={{ minHeight: '100%', maxHeight: '100vh' }}
         aria-hidden="true"
       />
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+      <div className="relative  mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         {/* Main Headline */}
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+          <h1 className="text-5xl md:text-7xl font-bold font-clash-medium text-white mb-4">
             Build Worlds, Skip the{' '}
+            <br />
             <span className="text-neon-green">&lt;code&gt;</span>
           </h1>
-          <p className="text-gray-300" style={{
-            fontFamily: 'Poppins',
-            fontWeight: 300,
-            fontStyle: 'normal',
-            fontSize: '18px',
-            lineHeight: '100%',
-            letterSpacing: '0%',
-            textAlign: 'center',
-            opacity: 0.5
-          }}>
+          <p className="text-gray-300 font-poppins font-light text-lg opacity-50">
             Create amazing games with AI assistance – no programming required.
           </p>
         </div>
@@ -59,7 +51,7 @@ const Hero: React.FC = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Hey, what game do you want to build?"
-              className="w-full h-32 bg-dark-gray border border-neon-green rounded-xl p-4 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-transparent"
+              className="w-full h-32 bg-dark-gray border rounded-xl p-4 border-neon-green text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-transparent"
             />
             
             {/* Input Icons */}
@@ -80,21 +72,42 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Suggested Games */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          {suggestedGames.map((game, index) => (
-            <button
-              key={index}
-              onClick={() => setInputValue(game.text)}
-              className="flex items-center space-x-3 bg-dark-gray hover:bg-gray-800 border border-gray-700 rounded-lg p-4 text-left transition-all hover:border-neon-green"
-            >
-              <img 
-                src={game.icon} 
-                alt={`${game.text} icon`}
-                className="w-5 h-5 flex-shrink-0"
-              />
-              <span className="text-white text-sm">{game.text}</span>
-            </button>
-          ))}
+        <div className="flex flex-col gap-4 font-poppins font-regular mx-auto">
+          {/* First Row */}
+          <div className="flex flex-wrap justify-center gap-4">
+            {suggestedGames.slice(0, 3).map((game, index) => (
+              <button
+                key={index}
+                onClick={() => setInputValue(game.text)}
+                className="flex items-center space-x-3 bg-dark-gray hover:bg-gray-800 border border-gray-700 rounded-lg p-4 text-left transition-all hover:border-neon-green flex-1 min-w-[280px]"
+              >
+                <img 
+                  src={game.icon} 
+                  alt={`${game.text} icon`}
+                  className="w-5 h-5 flex-shrink-0"
+                />
+                <span className="text-white text-sm">{game.text}</span>
+              </button>
+            ))}
+          </div>
+          
+          {/* Second Row */}
+          <div className="flex flex-wrap justify-center gap-4">
+            {suggestedGames.slice(3, 6).map((game, index) => (
+              <button
+                key={index + 3}
+                onClick={() => setInputValue(game.text)}
+                className="flex items-center space-x-3 bg-dark-gray hover:bg-gray-800 border border-gray-700 rounded-lg p-4 text-left transition-all hover:border-neon-green flex-1 min-w-[280px]"
+              >
+                <img 
+                  src={game.icon} 
+                  alt={`${game.text} icon`}
+                  className="w-5 h-5 flex-shrink-0"
+                />
+                <span className="text-white text-sm">{game.text}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
