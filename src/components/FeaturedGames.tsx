@@ -13,7 +13,7 @@ const FeaturedGames: React.FC = () => {
       title: 'Cyber Runner',
       description: <div>Navigate through a cyberpunk cityscape <br/><br></br></div>,
       developer: '@neondev',
-      textColor: 'text-blue-400',
+      textColor: 'text-blue-600',
       image: 'cyberpunk'
     },
     {
@@ -103,7 +103,7 @@ const FeaturedGames: React.FC = () => {
                   letterSpacing: '0%'
                 }}>{game.description}</p>
                 <p className={`text-neon-cyan text-xs mb-4 font-poppins font-semibold ${game.textColor} group-hover:opacity-80 transition-opacity`} style={{ fontSize: '10px' }}>By {game.developer}</p>
-                <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg hover:bg-green-400 font-poppins font-semibold transition-colors">
+                <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg  font-poppins font-semibold transition-colors">
                   Play Now
                 </button>
               </div>
