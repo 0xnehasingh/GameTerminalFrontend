@@ -46,7 +46,7 @@ const FeaturedGames: React.FC = () => {
         </div>
       ),
       'cyberpunk': (
-        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
+        <div className="w-full h-50 rounded-t-[10px] relative overflow-hidden">
           <img 
             src="/img2.png" 
             alt="Cyber Runner - Cyberpunk Cityscape" 
