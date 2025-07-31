@@ -53,12 +53,10 @@ const Hero: React.FC = () => {
               placeholder="Hey, what game do you want to build?"
               className="w-full h-32 bg-dark-gray border rounded-xl p-4 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-transparent"
               style={{
-                border: '2px solid transparent',
-                background: `
-                  linear-gradient(#141313, #141313) padding-box,
-                  linear-gradient(to top right, #8EFE49 0%, #73CD3B 0%, #55982C 0%, #8EFE49 100%) border-box
-                  
-                `,
+                border: '2px solid',
+                borderImageSource: 'linear-gradient(252.01deg, #8EFE49 -1.57%, rgba(115, 205, 59, 0.3) 7.95%, rgba(85, 152, 44, 0.1) 85.16%, #8EFE49 119.37%)',
+                borderImageSlice: '1',
+                background: '#141313',
                 boxShadow: '0px 0px 20px 0px #8EFE491A'
               }}
             />
@@ -89,6 +87,9 @@ const Hero: React.FC = () => {
                 key={index}
                 onClick={() => setInputValue(game.text)}
                 className="flex items-center space-x-3 bg-dark-gray hover:bg-gray-800 border border-gray-700 rounded-lg p-4 text-left transition-all hover:border-neon-green flex-1 min-w-[280px]"
+                style={{
+                  minWidth: game.text === 'Build a Tic Tac Toe Game' ? '20px' : '0px'
+                }}
               >
                 <img 
                   src={game.icon} 
@@ -107,6 +108,9 @@ const Hero: React.FC = () => {
                 key={index + 3}
                 onClick={() => setInputValue(game.text)}
                 className="flex items-center space-x-3 bg-dark-gray hover:bg-gray-800 border border-gray-700 rounded-lg p-4 text-left transition-all hover:border-neon-green flex-1 min-w-[280px]"
+                style={{
+                  minWidth: game.text === 'Develop a Memory Matching Game' ? '320px' : '280px'
+                }}
               >
                 <img 
                   src={game.icon} 
