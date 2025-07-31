@@ -88,10 +88,8 @@ const Hero: React.FC = () => {
                 onClick={() => setInputValue(game.text)}
                 className="flex items-center space-x-3 bg-dark-gray border border-gray-700 rounded-lg p-4 text-left transition-all flex-1 min-w-[280px]"
                 style={{
-                  minWidth: game.text === 'Build a Tic Tac Toe Game' ? '20px' : '0px',
-                  borderColor: game.text === 'Make a Space Invaders Game' ? '#3B82F6' : 
-                               game.text === 'Create a 2D Platformer Game' ? '#1E40AF' : 
-                               game.text === 'Build a Tic Tac Toe Game' ? '#10B981' : '#374151'
+                  minWidth: game.text === 'Build a Tic Tac Toe Game' ? '20px' : '100px',
+                  borderColor: '#374151'
                 }}
                 onMouseEnter={(e) => {
                   if (game.text === 'Make a Space Invaders Game') e.currentTarget.style.borderColor = '#3B82F6';
@@ -120,10 +118,9 @@ const Hero: React.FC = () => {
                 onClick={() => setInputValue(game.text)}
                 className="flex items-center space-x-3 bg-dark-gray border border-gray-700 rounded-lg p-4 text-left transition-all flex-1 min-w-[280px]"
                 style={{
-                  minWidth: game.text === 'Develop a Memory Matching Game' ? '320px' : '280px',
-                  borderColor: game.text === 'Develop a Memory Matching Game' ? '#F97316' : 
-                               game.text === 'Create a Snake Game' ? '#14B8A6' : 
-                               game.text === 'Build a Card-Matching Game' ? '#EF4444' : '#374151'
+                  minWidth: game.text === 'Develop a Memory Matching Game' ? '320px' : 
+                             game.text === 'Create a Snake Game' ? '230px' : '280px',
+                  borderColor: '#374151'
                 }}
                 onMouseEnter={(e) => {
                   if (game.text === 'Develop a Memory Matching Game') e.currentTarget.style.borderColor = '#F97316';
