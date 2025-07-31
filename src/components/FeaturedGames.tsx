@@ -13,21 +13,21 @@ const FeaturedGames: React.FC = () => {
       title: 'Cyber Runner',
       description: 'Navigate through a cyberpunk cityscape',
       developer: '@neondev',
-      textColor: 'text-blue-600',
+      textColor: 'text-blue-400',
       image: 'cyberpunk'
     },
     {
       title: 'Quantum Puzzle',
       description: 'Mind-bending puzzles in quantum realm',
       developer: '@puzzlemaster',
-      textColor: 'text-orange-500',
+      textColor: 'text-orange-400',
       image: 'quantum'
     },
     {
       title: 'Neon Racers',
       description: 'High-speed racing on neon highways',
       developer: '@speedfreak',
-      textColor: 'text-green-500',
+      textColor: 'text-neon-green',
       image: 'racing'
     }
   ]
