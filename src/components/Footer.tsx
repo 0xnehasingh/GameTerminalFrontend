@@ -1,9 +1,8 @@
 import React from 'react'
-import { Linkedin, Twitter, Send } from 'lucide-react'
 
 const Footer: React.FC = () => {
   return (
-    <footer id="pricing" className="py-16 bg-black" style={{ borderTop: '0.1px solid transparent', borderImage: 'linear-gradient(to right, transparent, #8CF449, transparent) 1' }}>
+    <footer id="pricing" className="py-16 bg-black" style={{ borderTop: '0.1px solid transparent', opacity: 0.5, borderImage: 'linear-gradient(to right, transparent, #8CF449, transparent) 1' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Logo */}
         <div className="mb-8">
@@ -34,19 +33,25 @@ const Footer: React.FC = () => {
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-8">
           <a href="#" className="text-white hover:text-neon-green transition-colors">
-            <Linkedin size={24} />
+            <img src="/ln.png" alt="LinkedIn" className="w-6 h-6" />
           </a>
           <a href="#" className="text-white hover:text-neon-green transition-colors">
-            <Twitter size={24} />
+            <img src="/x.png" alt="X (Twitter)" className="w-6 h-6" />
           </a>
           <a href="#" className="text-white hover:text-neon-green transition-colors">
-            <Send size={24} />
+            <img src="/tele.png" alt="Telegram" className="w-6 h-6" />
           </a>
         </div>
 
+        {/* Border below Social Media Icons */}
+        <div 
+          className="mb-8" 
+          style={{ borderTop: '0.59px solid transparent', opacity: 0.5, borderImage: 'linear-gradient(to right, transparent, #FFFFFF, transparent) 1' }}
+        ></div>
+
         {/* Copyright */}
         <p className="text-gray-400 text-sm font-clash-light">
-          © 2025 GameTerminal.com. All Rights Reserved.
+          © 2025 GameTerminal.com. All Rights Reserved.
         </p>
       </div>
     </footer>
