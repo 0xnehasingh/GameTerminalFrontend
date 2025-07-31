@@ -47,17 +47,17 @@ const Hero: React.FC = () => {
         {/* Input Field */}
         <div className="mb-8">
           <div className="relative max-w-2xl mx-auto">
-            <textarea
+          <textarea
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Hey, what game do you want to build?"
-              className="w-full h-32 bg-dark-gray border rounded-xl p-4 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-transparent"
+              className="w-full h-44 bg-dark-gray rounded-xl p-4 text-white placeholder-gray-400 resize-none focus:outline-none  "
               style={{
-                border: '2px solid',
-                borderImageSource: 'linear-gradient(252.01deg, #8EFE49 -1.57%, rgba(115, 205, 59, 0.3) 7.95%, rgba(85, 152, 44, 0.1) 85.16%, #8EFE49 119.37%)',
-                borderImageSlice: '1',
-                background: '#141313',
-                boxShadow: '0px 0px 20px 0px #8EFE491A'
+                border: '2px solid transparent',
+                borderRadius: '20px',
+                background: 'linear-gradient(#141313, #141313) padding-box, linear-gradient(252.01deg, #8EFE49 -1.57%, rgba(115, 205, 59, 0.3) 7.95%, rgba(85, 152, 44, 0.1) 85.16%, #8EFE49 119.37%) border-box',
+                backgroundClip: 'padding-box, border-box',
+                backgroundOrigin: 'padding-box, border-box'
               }}
             />
             
