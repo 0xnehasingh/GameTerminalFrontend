@@ -17,7 +17,7 @@ const TopCreators: React.FC = () => {
       avatar: '/avatar2.png',
       buttonColor: 'bg-blue-500',
       textColor: 'text-blue-500',
-      buttonTextColor: 'text-white',
+      buttonTextColor: 'text-black',
     },
     {
       username: '@sarah_g',
@@ -60,7 +60,7 @@ const TopCreators: React.FC = () => {
               <h3 className="text-lg font-poppins font-semibold text-white mb-2">{creator.username}</h3>
 
               {/* Games Created */}
-              <p className={`text-gray-300 font-poppins-regular text-sm mb-4 ${creator.textColor}`}>{creator.gamesCreated}</p>
+              <p className={`font-poppins-regular text-sm mb-4 ${creator.textColor}`}>{creator.gamesCreated}</p>
 
               {/* View Games Button */}
               <button onClick={() => window.open(creator.url, '_blank')} className={`w-full ${creator.buttonColor} ${creator.buttonTextColor} py-2 px-4 rounded-lg font-poppins font-semibold hover:opacity-80 transition-opacity`}>
