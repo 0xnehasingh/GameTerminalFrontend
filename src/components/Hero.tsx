@@ -19,16 +19,26 @@ const Hero: React.FC = () => {
       <img
         src="/leftbg.svg"
         alt="left background"
-        className="hidden md:block absolute left-0 top-0 h-full w-auto z-0 pointer-events-none select-none"
-        style={{ minHeight: '100%', maxHeight: '100vh' }}
+        className="absolute left-0 top-0 h-full w-auto z-0 pointer-events-none select-none"
+        style={{ 
+          minHeight: '100vh',
+          maxHeight: '100vh',
+          width: 'auto',
+          height: '100%'
+        }}
         aria-hidden="true"
       />
       {/* Right Background */}
       <img
         src="/rightbg.svg"
         alt="right background"
-        className="hidden md:block absolute right-0 top-0 h-full w-auto z-0 pointer-events-none select-none"
-        style={{ minHeight: '100%', maxHeight: '100vh' }}
+        className="absolute right-0 top-0 h-full w-auto z-0 pointer-events-none select-none"
+        style={{ 
+          minHeight: '100vh',
+          maxHeight: '100vh',
+          width: 'auto',
+          height: '100%'
+        }}
         aria-hidden="true"
       />
       <div className="relative  mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
