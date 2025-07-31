@@ -11,14 +11,14 @@ const FeaturedGames: React.FC = () => {
     },
     {
       title: 'Cyber Runner',
-      description: 'Navigate through a cyberpunk cityscape',
+      description: <div>Navigate through a cyberpunk cityscape <br/><br></br></div>,
       developer: '@neondev',
       textColor: 'text-blue-400',
       image: 'cyberpunk'
     },
     {
       title: 'Quantum Puzzle',
-      description: 'Mind-bending puzzles in quantum realm',
+      description: <div>Mind-bending puzzles in quantum realm <br/><br></br></div>,
       developer: '@puzzlemaster',
       textColor: 'text-orange-400',
       image: 'quantum'
@@ -91,7 +91,7 @@ const FeaturedGames: React.FC = () => {
             <div key={index} className="bg-dark-gray rounded-[20px] overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group border border-transparent hover:border-neon-green">
               {getGameImage(game.image)}
               
-              <div className="p-6">
+              <div className="p-4">
                 <h3 className="text-lg font-poppins font-semibold text-white mb-2">{game.title}</h3>
                 <p className="text-gray-300 text-sm mb-6 font-poppins font-regular group-hover:text-gray-200 transition-colors" style={{ 
                   fontFamily: 'Poppins',
