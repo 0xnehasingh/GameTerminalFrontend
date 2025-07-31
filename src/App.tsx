@@ -13,8 +13,7 @@ function App() {
       <FeaturedGames />
       <TopCreators />
       <Footer />
-      					<div className='fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(var(--primary),0.05),transparent_70%)]' />
-
+      
     </div>
   )
 }
