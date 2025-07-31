@@ -88,12 +88,12 @@ const FeaturedGames: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {games.map((game, index) => (
-            <div key={index} className="bg-dark-gray rounded-[20px] overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+            <div key={index} className="bg-dark-gray rounded-[20px] overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group">
               {getGameImage(game.image)}
               
               <div className="p-6">
-                <h3 className="text-xl font-poppins font-semibold text-white mb-2">{game.title}</h3>
-                <p className="text-gray-300 text-sm mb-6 font-poppins font-regular" style={{ 
+                <h3 className="text-xl font-poppins font-semibold text-white mb-2 group-hover:text-neon-green transition-colors">{game.title}</h3>
+                <p className="text-gray-300 text-sm mb-6 font-poppins font-regular group-hover:text-gray-200 transition-colors" style={{ 
                   fontFamily: 'Poppins',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -102,7 +102,7 @@ const FeaturedGames: React.FC = () => {
                   lineHeight: '100%',
                   letterSpacing: '0%'
                 }}>{game.description}</p>
-                <p className={`text-neon-cyan text-xs mb-4 font-poppins font-semibold ${game.textColor}`}>By {game.developer}</p>
+                <p className={`text-neon-cyan text-xs mb-4 font-poppins font-semibold ${game.textColor} group-hover:opacity-80 transition-opacity`}>By {game.developer}</p>
                 <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg hover:bg-green-400 font-poppins font-semibold transition-colors">
                   Play Now
                 </button>

@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
       <div className="relative  mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         {/* Main Headline */}
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold font-clash-medium text-white mb-4">
+          <h1 className="text-5xl md:text-5xl font-bold font-clash-medium text-white mb-4">
             Build Worlds, Skip the{' '}
             <br />
             <span className="text-neon-green">&lt;code&gt;</span>

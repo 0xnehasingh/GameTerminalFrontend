@@ -46,9 +46,9 @@ const TopCreators: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {creators.map((creator, index) => (
-            <div key={index} className="bg-dark-gray p-6 text-center hover:transform hover:scale-105 transition-all duration-300" style={{ borderRadius: '20px' }}>
+            <div key={index} className="bg-dark-gray p-6 text-center hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group" style={{ borderRadius: '20px' }}>
               {/* Avatar */}
-              <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+              <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden group-hover:scale-110 transition-transform">
                 <img
                   src={creator.avatar}
                   alt={`${creator.username} avatar`}
@@ -57,15 +57,14 @@ const TopCreators: React.FC = () => {
               </div>
 
               {/* Username */}
-              <h3 className="text-lg font-poppins font-semibold text-white mb-2">{creator.username}</h3>
+              <h3 className="text-lg font-poppins font-semibold text-white mb-2 group-hover:text-neon-green transition-colors">{creator.username}</h3>
 
               {/* Games Created */}
-              <p className={`font-poppins-regular text-sm mb-4 ${creator.textColor}`}>{creator.gamesCreated}</p>
+              <p className={`font-poppins-regular text-sm mb-4 ${creator.textColor} group-hover:opacity-80 transition-opacity`}>{creator.gamesCreated}</p>
 
               {/* View Games Button */}
               <button onClick={() => window.open(creator.url, '_blank')} className={`w-full ${creator.buttonColor} ${creator.buttonTextColor} py-2 px-4 rounded-lg font-poppins font-semibold hover:opacity-80 transition-opacity`}>
                 View Games
-
               </button>
             </div>
           ))}
