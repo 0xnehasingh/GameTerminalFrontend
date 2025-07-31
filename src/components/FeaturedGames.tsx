@@ -35,7 +35,7 @@ const FeaturedGames: React.FC = () => {
   const getGameImage = (imageType: string) => {
     const images = {
       'space-shooter': (
-        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
           <img 
             src="/img1.png" 
             alt="Neon Blasters - Space Shooter" 
@@ -45,7 +45,7 @@ const FeaturedGames: React.FC = () => {
         </div>
       ),
       'cyberpunk': (
-        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
           <img 
             src="/img2.png" 
             alt="Cyber Runner - Cyberpunk Cityscape" 
@@ -55,7 +55,7 @@ const FeaturedGames: React.FC = () => {
         </div>
       ),
       'quantum': (
-        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
           <img 
             src="/img3.png" 
             alt="Quantum Puzzle - Abstract Geometric Shapes" 
@@ -65,7 +65,7 @@ const FeaturedGames: React.FC = () => {
         </div>
       ),
       'racing': (
-        <div className="w-full h-50 rounded-t-lg relative overflow-hidden">
+        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
           <img 
             src="/img4.png" 
             alt="Neon Racers - Futuristic Racing Cars" 
@@ -87,12 +87,20 @@ const FeaturedGames: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {games.map((game, index) => (
-            <div key={index} className="bg-dark-gray rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+            <div key={index} className="bg-dark-gray rounded-[20px] overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
               {getGameImage(game.image)}
               
               <div className="p-6">
                 <h3 className="text-xl font-poppins font-semibold text-white mb-2">{game.title}</h3>
-                <p className="text-gray-300 text-sm mb-3 font-poppins font-regular">{game.description}</p>
+                <p className="text-gray-300 text-sm mb-3 font-poppins font-regular" style={{ 
+                  fontFamily: 'Poppins',
+                  fontWeight: 400,
+                  fontStyle: 'normal',
+                  fontSize: '12px',
+                  color: '#BCBCBC',
+                  lineHeight: '100%',
+                  letterSpacing: '0%'
+                }}>{game.description}</p>
                 <p className={`text-neon-cyan text-xs mb-4 font-poppins font-semibold ${game.textColor}`}>By {game.developer}</p>
                 <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg hover:bg-green-400 font-poppins font-semibold transition-colors">
                   Play Now
