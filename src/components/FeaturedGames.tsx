@@ -80,7 +80,7 @@ const FeaturedGames: React.FC = () => {
   }
 
   return (
-    <section id="features" className="py-20 bg-black">
+    <section id="features" className="py-5 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl md:text-5xl font-clash-medium text-white text-center mb-16">
           Featured Games
