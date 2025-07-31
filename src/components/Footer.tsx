@@ -2,7 +2,10 @@ import React from 'react'
 
 const Footer: React.FC = () => {
   return (
-    <footer id="pricing" className="py-10 bg-black" style={{ borderTop: '0.1px solid transparent', opacity: 0.5, borderImage: 'linear-gradient(to right, transparent, #8CF449, transparent) 1' }}>
+    
+    
+    <footer id="pricing" className="py-10 bg-gradient-to-t from-[#66ff004f] via-transparent to-transparent shadow-lg" style={{ borderTop: '0.1px solid transparent', opacity: 0.5, borderImage: 'linear-gradient(to right, transparent, #8CF449, transparent) 1' }}>
+      
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Logo */}
         <div className="mb-8">

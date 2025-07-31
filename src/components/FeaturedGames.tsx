@@ -25,7 +25,8 @@ const FeaturedGames: React.FC = () => {
     },
     {
       title: 'Neon Racers',
-      description: 'High-speed racing on neon highways',
+  
+      description: <div>High-speed racing on neon highways <br/><br></br></div>,
       developer: '@speedfreak',
       textColor: 'text-neon-green',
       image: 'racing'
