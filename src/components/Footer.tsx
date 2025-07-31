@@ -4,9 +4,9 @@ const Footer: React.FC = () => {
   return (
     
     
-    <footer id="pricing" className="py-10 bg-gradient-to-t from-[#66ff004f] via-transparent to-transparent shadow-lg" style={{ borderTop: '0.1px solid transparent', opacity: 0.5, borderImage: 'linear-gradient(to right, transparent, #8CF449, transparent) 1' }}>
+    <footer id="pricing" className="pt-10" style={{ borderTop: '0.1px solid transparent', opacity: 0.5, borderImage: 'linear-gradient(to right, transparent, #8CF449, transparent) 1' }}>
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="text-center">
         {/* Logo */}
         <div className="mb-8">
           <div className="text-4xl font-bold text-neon-green mx-auto w-fit">
@@ -63,6 +63,7 @@ const Footer: React.FC = () => {
             </svg>
           </a>
         </div>
+        <div className="bg-gradient-to-t from-[#66ff004f] via-transparent to-transparent opacity-60 shadow-lg">
 
         {/* Border below Social Media Icons */}
         <div 
@@ -71,9 +72,10 @@ const Footer: React.FC = () => {
         ></div>
 
         {/* Copyright */}
-        <p className="text-gray-400 text-sm font-clash-light">
+        <p className="text-gray-400 pb-6 text-sm font-clash-light">
           © 2025 GameTerminal.com. All Rights Reserved.
         </p>
+        </div>
       </div>
     </footer>
   )
