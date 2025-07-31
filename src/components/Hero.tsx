@@ -86,9 +86,20 @@ const Hero: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setInputValue(game.text)}
-                className="flex items-center space-x-3 bg-dark-gray hover:bg-gray-800 border border-gray-700 rounded-lg p-4 text-left transition-all hover:border-neon-green flex-1 min-w-[280px]"
+                className="flex items-center space-x-3 bg-dark-gray border border-gray-700 rounded-lg p-4 text-left transition-all flex-1 min-w-[280px]"
                 style={{
-                  minWidth: game.text === 'Build a Tic Tac Toe Game' ? '20px' : '0px'
+                  minWidth: game.text === 'Build a Tic Tac Toe Game' ? '20px' : '0px',
+                  borderColor: game.text === 'Make a Space Invaders Game' ? '#3B82F6' : 
+                               game.text === 'Create a 2D Platformer Game' ? '#1E40AF' : 
+                               game.text === 'Build a Tic Tac Toe Game' ? '#10B981' : '#374151'
+                }}
+                onMouseEnter={(e) => {
+                  if (game.text === 'Make a Space Invaders Game') e.currentTarget.style.borderColor = '#3B82F6';
+                  else if (game.text === 'Create a 2D Platformer Game') e.currentTarget.style.borderColor = '#1E40AF';
+                  else if (game.text === 'Build a Tic Tac Toe Game') e.currentTarget.style.borderColor = '#10B981';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#374151';
                 }}
               >
                 <img 
@@ -107,9 +118,20 @@ const Hero: React.FC = () => {
               <button
                 key={index + 3}
                 onClick={() => setInputValue(game.text)}
-                className="flex items-center space-x-3 bg-dark-gray hover:bg-gray-800 border border-gray-700 rounded-lg p-4 text-left transition-all hover:border-neon-green flex-1 min-w-[280px]"
+                className="flex items-center space-x-3 bg-dark-gray border border-gray-700 rounded-lg p-4 text-left transition-all flex-1 min-w-[280px]"
                 style={{
-                  minWidth: game.text === 'Develop a Memory Matching Game' ? '320px' : '280px'
+                  minWidth: game.text === 'Develop a Memory Matching Game' ? '320px' : '280px',
+                  borderColor: game.text === 'Develop a Memory Matching Game' ? '#F97316' : 
+                               game.text === 'Create a Snake Game' ? '#14B8A6' : 
+                               game.text === 'Build a Card-Matching Game' ? '#EF4444' : '#374151'
+                }}
+                onMouseEnter={(e) => {
+                  if (game.text === 'Develop a Memory Matching Game') e.currentTarget.style.borderColor = '#F97316';
+                  else if (game.text === 'Create a Snake Game') e.currentTarget.style.borderColor = '#14B8A6';
+                  else if (game.text === 'Build a Card-Matching Game') e.currentTarget.style.borderColor = '#EF4444';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#374151';
                 }}
               >
                 <img 
