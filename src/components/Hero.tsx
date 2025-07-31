@@ -51,7 +51,16 @@ const Hero: React.FC = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Hey, what game do you want to build?"
-              className="w-full h-32 bg-dark-gray border rounded-xl p-4 border-neon-green text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-transparent"
+              className="w-full h-32 bg-dark-gray border rounded-xl p-4 text-white placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-neon-green focus:border-transparent"
+              style={{
+                border: '2px solid transparent',
+                background: `
+                  linear-gradient(#141313, #141313) padding-box,
+                  linear-gradient(to top right, #8EFE49 0%, #73CD3B 0%, #55982C 0%, #8EFE49 100%) border-box
+                  
+                `,
+                boxShadow: '0px 0px 20px 0px #8EFE491A'
+              }}
             />
             
             {/* Input Icons */}

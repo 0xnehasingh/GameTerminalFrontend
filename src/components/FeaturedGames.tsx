@@ -92,7 +92,7 @@ const FeaturedGames: React.FC = () => {
               
               <div className="p-6">
                 <h3 className="text-xl font-poppins font-semibold text-white mb-2">{game.title}</h3>
-                <p className="text-gray-300 text-sm mb-3 font-poppins font-regular" style={{ 
+                <p className="text-gray-300 text-sm mb-6 font-poppins font-regular" style={{ 
                   fontFamily: 'Poppins',
                   fontWeight: 400,
                   fontStyle: 'normal',
