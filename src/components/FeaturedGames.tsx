@@ -3,81 +3,58 @@ import React from 'react'
 const FeaturedGames: React.FC = () => {
   const games = [
     {
-      title: 'Neon Blasters',
-      description: 'Fast-paced space shooter with stunning visuals',
-      developer: '@spacegamer',
-      textColor: 'text-teal-500',
-      image: 'space-shooter'
-    },
-    {
-      title: 'Cyber Runner',
-      description: <div>Navigate through a cyberpunk cityscape <br/><br></br></div>,
-      developer: '@neondev',
-      textColor: 'text-blue-600',
-      image: 'cyberpunk'
-    },
-    {
-      title: 'Quantum Puzzle',
-      description: <div>Mind-bending puzzles in quantum realm <br/><br></br></div>,
-      developer: '@puzzlemaster',
-      textColor: 'text-orange-400',
-      image: 'quantum'
+      title: 'Neon Racers',
+      description: 'Navigate through a cyberpunk cityscape',
+      image: '/image 1.png',
+      category: 'SPORTS/ARCADE',
+      profileImage: '/avatar1.png',
+      stats: {
+        likes: 0,
+        users: 0,
+        plays: 1,
+        code: 0
+      }
     },
     {
       title: 'Neon Racers',
-  
-      description: <div>High-speed racing on neon highways <br/><br></br></div>,
-      developer: '@speedfreak',
-      textColor: 'text-neon-green',
-      image: 'racing'
+      description: 'Navigate through a cyberpunk cityscape',
+      image: '/image 2.png',
+      category: 'SPORTS/ARCADE',
+      profileImage: '/avatar2.png',
+      stats: {
+        likes: 0,
+        users: 0,
+        plays: 1,
+        code: 0
+      }
+    },
+    {
+      title: 'Neon Racers',
+      description: 'Navigate through a cyberpunk cityscape',
+      image: '/image 3.png',
+      category: 'SPORTS/ARCADE',
+      profileImage: '/avatar3.png',
+      stats: {
+        likes: 0,
+        users: 0,
+        plays: 1,
+        code: 0
+      }
+    },
+    {
+      title: 'Neon Racers',
+      description: 'Navigate through a cyberpunk cityscape',
+      image: '/image 4.png',
+      category: 'SPORTS/ARCADE',
+      profileImage: '/avatar4.png',
+      stats: {
+        likes: 0,
+        users: 0,
+        plays: 0,
+        code: 0
+      }
     }
   ]
-
-  const getGameImage = (imageType: string) => {
-    const images = {
-      'space-shooter': (
-        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
-          <img 
-            src="/img1.png" 
-            alt="Neon Blasters - Space Shooter" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
-      ),
-      'cyberpunk': (
-        <div className="w-full h-50 rounded-t-[10px] relative overflow-hidden">
-          <img 
-            src="/img2.png" 
-            alt="Cyber Runner - Cyberpunk Cityscape" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
-      ),
-      'quantum': (
-        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
-          <img 
-            src="/img3.png" 
-            alt="Quantum Puzzle - Abstract Geometric Shapes" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
-      ),
-      'racing': (
-        <div className="w-full h-50 rounded-t-[20px] relative overflow-hidden">
-          <img 
-            src="/img4.png" 
-            alt="Neon Racers - Futuristic Racing Cars" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
-      )
-    }
-    return images[imageType as keyof typeof images] || images['space-shooter']
-  }
 
   return (
     <section id="features" className="py-5 bg-black">
@@ -88,22 +65,92 @@ const FeaturedGames: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {games.map((game, index) => (
-            <div key={index} className="bg-dark-gray rounded-[20px] overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group border border-transparent hover:border-neon-green">
-              {getGameImage(game.image)}
+            <div key={index} className="bg-dark-gray rounded-[20px] overflow-hidden hover:transform hover:scale-105 transition-all duration-300 cursor-pointer group relative">
+              {/* Original Card Content - Unchanged */}
+              <div className="w-full h-70 relative overflow-hidden">
+                <img 
+                  src={game.image} 
+                  alt={`${game.title} - ${game.description}`} 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              </div>
               
-              <div className="p-4">
-                <h3 className="text-lg font-poppins font-semibold text-white mb-2">{game.title}</h3>
-                <p className="text-gray-300 text-sm mb-6 font-poppins font-regular group-hover:text-gray-200 transition-colors" style={{ 
-                  fontFamily: 'Poppins',
-                  fontWeight: 400,
-                  fontStyle: 'normal',
-                  fontSize: '12px',
-                  color: '#BCBCBC',
-                  lineHeight: '100%',
-                  letterSpacing: '0%'
-                }}>{game.description}</p>
-                <p className={`text-neon-cyan text-xs mb-4 font-poppins font-semibold ${game.textColor} group-hover:opacity-80 transition-opacity`} style={{ fontSize: '10px' }}>By {game.developer}</p>
-                <button className="w-full bg-neon-green text-black py-2 px-4 rounded-lg  font-poppins font-semibold transition-colors">
+              <div className="p-6">
+                {/* Title */}
+                <h3 className="text-l font-poppins font-semibold text-white mb-2 group-hover:text-neon-green transition-colors">
+                  {game.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-gray-300 text-xs mb-4 font-poppins font-regular group-hover:text-gray-200 transition-colors">
+                  {game.description}
+                </p>
+                
+                {/* Stats Row */}
+                <div className="flex items-center justify-center space-x-12">
+                  <div className="flex flex-col items-center space-y-1">
+                    <svg className="w-4 h-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span className="text-white text-xs font-medium">{game.stats.likes}</span>
+                  </div>
+                  
+                  <div className="flex flex-col items-center space-y-1">
+                    <svg className="w-4 h-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                    <span className="text-white text-xs font-medium">{game.stats.users}</span>
+                  </div>
+                  
+                  <div className="flex flex-col items-center space-y-1">
+                    <svg className="w-4 h-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5v14l11-7z" />
+                    </svg>
+                    <span className="text-white text-xs font-medium">{game.stats.plays}</span>
+                  </div>
+                  
+                  <div className="flex flex-col items-center space-y-1">
+                    <svg className="w-4 h-4 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    <span className="text-white text-xs font-medium">{game.stats.code}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Hover Overlay - Rises from bottom */}
+              <div className="absolute inset-0 bg-black/70 backdrop-blur-sm flex flex-col items-center justify-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out p-6">
+                {/* Category Tag */}
+                <div className="bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                  <span className="text-neon-green text-xs font-semibold uppercase tracking-wide">
+                    {game.category}
+                  </span>
+                </div>
+                
+                {/* Profile Image */}
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 rounded-full border-2 border-neon-green overflow-hidden bg-black">
+                    <img 
+                      src="/avatar3.png" 
+                      alt={`${game.title} profile`} 
+                      className="w-full h-full object-cover grayscale"
+                    />
+                  </div>
+                </div>
+                
+                {/* Game Title */}
+                <h3 className="text-xl font-poppins font-bold text-neon-green mb-4 text-center">
+                  {game.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-gray-300 text-sm mb-6 text-center leading-relaxed max-w-xs">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. and typesetting industry.
+                </p>
+                
+                {/* Play Now Button */}
+                <button className="bg-neon-green text-black font-bold py-3 px-8 rounded-full hover:bg-green-400 transition-colors duration-300 transform hover:scale-105">
                   Play Now
                 </button>
               </div>
