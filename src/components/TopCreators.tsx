@@ -88,8 +88,9 @@ const TopCreators: React.FC = () => {
                   
                   {/* Username Overlay - At bottom of image */}
                   <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-0">
-                    <div className="bg-dark-gray rounded-t-2xl px-6 py-0 pt-1">
-                      <span className={`text-sm font-bold ${creator.usernameColor}`}>{creator.name}</span>
+                    <div className="relative -mb-2">
+                      <img src="/abcd.svg" alt="username background" className="w-auto h-10" />
+                      <span className={`absolute inset-0 flex items-center justify-center text-sm font-bold ${creator.usernameColor}`}>{creator.name}</span>
                     </div>
                   </div>
                 </div>
