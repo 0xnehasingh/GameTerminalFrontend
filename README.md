@@ -1,4 +1,4 @@
-# Game Terminal Project
+# Game Bloom Project
 
 A modern, AI-powered game creation platform with a sleek dark theme and neon accents. Built with React, TypeScript, and Tailwind CSS.
 
